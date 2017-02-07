@@ -37,6 +37,8 @@ THE SOFTWARE.
 
 */
 
+namespace PHPGraphLib;
+
 class PHPGraphLib {
 
 	//set to actual font heights and widths used
