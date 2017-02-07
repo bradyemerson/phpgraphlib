@@ -168,9 +168,9 @@ class PHPGraphLibStacked extends PHPGraphLib
 		}
 	}
 
-	public function addData($data, $data2 = '', $data3 = '', $data4 = '', $data5 = '')
+	public function addData($data_sets)
 	{
-		parent::addData($data, $data2, $data3, $data4, $data5);
+		parent::addData($data_sets);
 
 		$key_max = array();
 

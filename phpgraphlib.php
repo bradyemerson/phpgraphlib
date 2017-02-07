@@ -938,10 +938,8 @@ class PHPGraphLib {
 		}
 	}
 
-	public function addData($data, $data2 = '', $data3 = '', $data4 = '', $data5 = '') 
+	public function addData($data_sets)
 	{
-		$data_sets = array($data, $data2, $data3, $data4, $data5);
-
 		foreach ($data_sets as $set) {
 			if (is_array($set)) {
 				$this->data_array[] = $set;
@@ -1436,9 +1434,8 @@ class PHPGraphLib {
 		$this->setGenericColor($color, '$this->y_axis_text_color', "Y axis Text color not specified properly.");
 	}
 
-	public function setBarColor($color1, $color2 = '', $color3 = '', $color4 = '', $color5 = '')
+	public function setBarColor($bar_colors)
 	{
-		$bar_colors = array($color1, $color2, $color3, $color4, $color5);
 		foreach ($bar_colors as $key => $color) {
 			if ($color) {
 				$this->setGenericColor($color, '$this->multi_bar_colors[]', "Bar color " . ($key + 1) . " not specified properly.");
@@ -1545,9 +1542,8 @@ class PHPGraphLib {
 		$this->setGenericColor($color, '$this->legend_swatch_outline_color', "Swatch outline color not specified properly.");
 	}
 
-	public function setLegendTitle($title1, $title2 = '', $title3 = '', $title4 = '', $title5 = '')
+	public function setLegendTitle($title_array)
 	{
-		$title_array = array($title1, $title2, $title3, $title4, $title5);
 		foreach ($title_array as $title) {
 			if ($len = strlen($title)) {
 				if ($len > self::LEGEND_MAX_CHARS) { 
